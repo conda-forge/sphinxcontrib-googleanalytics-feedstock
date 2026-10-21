@@ -1,13 +1,13 @@
 {% set name = "sphinxcontrib-googleanalytics" %}
-{% set version = "0.5" %}
+{% set version = "0.6" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: a2ac6df9d16b9c124febf6b44e714c1fd9725e692b73ee84ec6b52b377ff5561
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: dc8740342331ff523b5eda8f5d1ea6176acfa86bbd195e8d67f642db8f2b22c7
 
 build:
   noarch: python
