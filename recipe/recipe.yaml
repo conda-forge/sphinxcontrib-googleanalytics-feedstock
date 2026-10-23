@@ -1,0 +1,47 @@
+schema_version: 1
+
+context:
+  name: sphinxcontrib-googleanalytics
+  version: "0.6"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/sphinxcontrib_googleanalytics-${{ version }}.tar.gz
+  sha256: dc8740342331ff523b5eda8f5d1ea6176acfa86bbd195e8d67f642db8f2b22c7
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools >=61.2
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - sphinx >=0.6
+
+tests:
+  - python:
+      imports:
+        - sphinxcontrib.googleanalytics
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+
+about:
+  homepage: https://github.com/sphinx-contrib/googleanalytics
+  summary: Sphinx extension googleanalytics
+  license: BSD-3-Clause
+  license_file: LICENSE
+  repository: https://github.com/sphinx-contrib/googleanalytics
+
+extra:
+  recipe-maintainers:
+    - zaneselvans
