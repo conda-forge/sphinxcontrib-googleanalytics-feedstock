@@ -5,9 +5,11 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sphinxcontrib-g
 
 Home: https://github.com/sphinx-contrib/googleanalytics
 
-Package license: BSD-4.3TAHOE
+Package license: BSD-3-Clause
 
 Summary: Sphinx extension googleanalytics
+
+Development: https://github.com/sphinx-contrib/googleanalytics
 
 Current build status
 ====================
